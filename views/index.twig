@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<h2>{{ foo }}</h2>
+	<p>{{ qux }}</p>
+	{% for post in posts %}
+		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+	{% endfor %}
+
+	<div class="container mx-auto">
+		<div class="bg-white shadow overflow-hidden sm:rounded-lg">
+			<div class="px-4 py-5 sm:px-6">
+				<h3 class="text-lg font-medium leading-6 text-gray-900">Hello, Tailwind CSS in Timber!</h3>
+				<p class="mt-1 max-w-2xl text-sm text-gray-500">This is a simple example using Tailwind CSS classes in Timber template.</p>
+			</div>
+			<div class="border-t border-gray-200 px-4 py-5 sm:p-0">
+				<div class="grid grid-cols-3 gap-4">
+					<div class="bg-gray-200 p-4">1</div>
+					<div class="bg-gray-200 p-4">2</div>
+					<div class="bg-gray-200 p-4">3</div>
+					<div class="bg-gray-200 p-4">4</div>
+					<div class="bg-gray-200 p-4">5</div>
+					<div class="bg-gray-200 p-4">6</div>
+					<div class="bg-gray-200 p-4">7</div>
+					<div class="bg-gray-200 p-4">8</div>
+					<div class="bg-gray-200 p-4">9</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	{% include 'partial/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+{% endblock %}

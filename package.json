@@ -1,0 +1,26 @@
+{
+  "name": "berry",
+  "version": "1.0.0",
+  "description": "Berry Timber starter theme with Vite",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite build --watch --config ./config/vite.config.js & browser-sync start --config ./config/bs-config.js",
+    "build": "vite build --watch --config ./config/vite.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@jridgewell/sourcemap-codec": "^1.4.15",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "autoprefixer": "^10.4.19",
+    "browser-sync": "^3.0.2",
+    "postcss": "^8.4.39",
+    "sass": "^1.77.6",
+    "tailwindcss": "^3.4.4",
+    "vite": "^4.5.3"
+  },
+  "keywords": [],
+  "dependencies": {
+    "consola": "^3.2.3"
+  }
+}
